@@ -17,7 +17,7 @@ const Home = () => {
     <div>
       <div className="header-color">
         <nav className="nav-container">
-          <h3 id="logo">Qspiders</h3>
+          <h3 id="logo"><span id="orange">Q</span>spiders</h3>
           <ul className={`sidebar ${isSidebarOpen ? "active" : ""}`}>
             <li onClick={toggleSidebar}>
               <img src={closeicon} id="icon" alt="Close Icon" />
@@ -45,6 +45,7 @@ const Home = () => {
           <div className="intro-text">
             <h1 id="main-text">Level up your development skills in Qspiders</h1>
             <h2 id="sub-text">Learn from experts who have real industry experience and get certified!</h2>
+            <h3>We have placed over 1000+ students all across India</h3>
           </div>
           <div className="intro-banner">
             <Lottie animationData={codingAnimation} loop={true}/>

@@ -8,10 +8,16 @@
 .header-color {
     width: 100%;
     height: 700px;
-    background: linear-gradient(60deg, #1e1e1e 20%, #FFA80A 200%,#1e1e1e 20%);
+    background: 
+        linear-gradient(60deg, #1e1e1e 20%, #FFA80A 60%, #1e1e1e 100%), 
+        url('../assets/images/abstractcover.png');
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
+
 
 .nav-container {
     display: flex;
@@ -22,8 +28,12 @@
 }
 
 #logo {
-    font-size: 1.5rem;
-    color: #333;
+    font-size: 2.4rem;
+    color: white;
+}
+
+#orange{
+    color: orange;
 }
 
 .nav-links {
@@ -145,6 +155,11 @@
 
 
 @media (max-width: 768px) {
+
+    #logo{
+        font-size: 1.8rem;
+    }
+
     .nav-links {
         display: none; 
     }
