@@ -8,15 +8,20 @@ import Lottie from "lottie-react";
 import javaIcon from "../assets/images/programming-language-icons/java.png";
 import hibernateIcon from "../assets/images/programming-language-icons/hibernate.png";
 import springBootIcon from "../assets/images/programming-language-icons/spring-boot.png";
-import seleniumIcon from "../assets/images/programming-language-icons/selenium.png"
-import mysqlIcon from "../assets/images/programming-language-icons/mysql.png"
-import gitIcon from "../assets/images/programming-language-icons/git.png"
-import pythonIcon from "../assets/images/programming-language-icons/python.png"
-import djangoIcon from "../assets/images/programming-language-icons/django.png"
-import htmlIcon from "../assets/images/programming-language-icons/html.png"
-import cssIcon from "../assets/images/programming-language-icons/css.png"
-import jsIcon from "../assets/images/programming-language-icons/js.png"
-import reactIcon from "../assets/images/programming-language-icons/react.png"
+import seleniumIcon from "../assets/images/programming-language-icons/selenium.png";
+import mysqlIcon from "../assets/images/programming-language-icons/mysql.png";
+import gitIcon from "../assets/images/programming-language-icons/git.png";
+import pythonIcon from "../assets/images/programming-language-icons/python.png";
+import djangoIcon from "../assets/images/programming-language-icons/django.png";
+import htmlIcon from "../assets/images/programming-language-icons/html.png";
+import cssIcon from "../assets/images/programming-language-icons/css.png";
+import jsIcon from "../assets/images/programming-language-icons/js.png";
+import reactIcon from "../assets/images/programming-language-icons/react.png";
+import corporateIcon from "../assets/images/programming-language-icons/corporate.png";
+import certificateIcon from "../assets/icons/certificate.png"
+import chaireIcon from "../assets/icons/chair.png"
+import clockIcon from "../assets/icons/clock.png"
+import personIcon from "../assets/icons/person.png"
 
 const Home = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -24,8 +29,6 @@ const Home = () => {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
-
-  
 
   return (
     <div>
@@ -118,7 +121,7 @@ const Home = () => {
       <div className="course-section">
         <div className="course-intro">
           <h1 id="orange">Explore the Training Programs We Offer</h1>
-          <h2>The courses we offer are 100% job oriented</h2>
+          <h2>The courses we offer are 💯 job oriented</h2>
         </div>
         <div className="course-container">
           <div className="course-card">
@@ -126,15 +129,19 @@ const Home = () => {
               <h1>Java Full Stack</h1>
             </div>
             <div className="course-icons">
-              <img src={javaIcon} width={50}/>
+              <img src={javaIcon} width={50} />
               <img src={hibernateIcon} width={50} />
               <img src={springBootIcon} width={50} />
               <img src={mysqlIcon} width={50} />
             </div>
             <div className="course-description">
-              <p id="course-description">Core JAVA, JEE, Advanced Java, Hibernate, Spring Boot, MySQL</p>
+              <p id="course-description">
+                Core JAVA, JEE, Advanced Java, Hibernate, Spring Boot, MySQL
+              </p>
               <p id="course-description">Duration: 6 months</p>
-              <p id="course-price">Course price: <span id="orange">39,000</span></p>
+              <p id="course-price">
+                Course price: <span id="orange">39,000</span>
+              </p>
             </div>
             <div className="course-button">
               <button id="course-btn">Enroll</button>
@@ -145,14 +152,18 @@ const Home = () => {
               <h1>A/M Testing</h1>
             </div>
             <div className="course-icons">
-            <img src={javaIcon} width={50}/>
-            <img src={seleniumIcon} width={50}/>
-            <img src={gitIcon} width={50}/>
+              <img src={javaIcon} width={50} />
+              <img src={seleniumIcon} width={50} />
+              <img src={gitIcon} width={50} />
             </div>
             <div className="course-description">
-              <p id="course-description">Core JAVA, Selenium, Automatic and Manual Testing, TestNG, Git</p>
+              <p id="course-description">
+                Core JAVA, Selenium, Automatic and Manual Testing, TestNG, Git
+              </p>
               <p id="course-description">Duration: 6 months</p>
-              <p id="course-price">Course price: <span id="orange">32,000</span></p>
+              <p id="course-price">
+                Course price: <span id="orange">32,000</span>
+              </p>
             </div>
             <div className="course-button">
               <button id="course-btn">Enroll</button>
@@ -160,7 +171,7 @@ const Home = () => {
           </div>
           <div className="course-card">
             <div className="card-header">
-            <h1>Python Full Stack</h1>
+              <h1>Python Full Stack</h1>
             </div>
             <div className="course-icons">
               <img src={pythonIcon} width={50} />
@@ -168,12 +179,16 @@ const Home = () => {
               <img src={mysqlIcon} width={50} />
             </div>
             <div className="course-description">
-            <p id="course-description">Python, Django, Flask, MySQL, FastAPI, GraphQL</p>
-            <p id="course-description">Duration: 6 months</p>
-            <p id="course-price">Course price: <span id="orange">34,000</span></p>
+              <p id="course-description">
+                Python, Django, Flask, MySQL, FastAPI, GraphQL
+              </p>
+              <p id="course-description">Duration: 6 months</p>
+              <p id="course-price">
+                Course price: <span id="orange">34,000</span>
+              </p>
             </div>
             <div className="course-button">
-               <button id="course-btn">Enroll</button>
+              <button id="course-btn">Enroll</button>
             </div>
           </div>
           <div className="course-card">
@@ -181,7 +196,7 @@ const Home = () => {
               <h1>Front-end Development</h1>
             </div>
             <div className="course-icons">
-              <img src={htmlIcon} width={50}/>
+              <img src={htmlIcon} width={50} />
               <img src={cssIcon} width={50} />
               <img src={jsIcon} width={50} />
               <img src={reactIcon} width={50} />
@@ -189,17 +204,63 @@ const Home = () => {
             <div className="course-description">
               <p id="course-description">HTML, CSS, JavaScript, React.js</p>
               <p id="course-description">Duration: 5 months</p>
-              <p id="course-price">Course price: <span id="orange">28,000</span></p>
+              <p id="course-price">
+                Course price: <span id="orange">28,000</span>
+              </p>
             </div>
             <div className="course-button">
               <button id="course-btn">Enroll</button>
             </div>
           </div>
           <div className="course-card">
-            <div className="card-header"></div>
-            <div className="course-icons"></div>
-            <div className="course-description"></div>
-            <div className="course-button"></div>
+            <div className="card-header">
+              <h1>Corporate Training</h1>
+            </div>
+            <div className="course-icons">
+              <img src={corporateIcon} width={70} />
+            </div>
+            <div className="course-description">
+              <p id="course-description">
+                Communication, Decesion Making, Problem Solving
+              </p>
+              <p id="course-description">Duration: 2-3 weeks</p>
+              <p id="course-price">
+                Course price: <span id="orange">28,000</span>
+              </p>
+            </div>
+            <div className="course-button">
+              <button id="course-btn">Enroll</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="about-us">
+        <div className="about-us-bg">
+          <div className="about-title">
+            <h1 id="aboutheader-h1">Why <br/> choose us?</h1>
+            <h2 id="aboutheader-h2">
+              Our trainers are experienced professionals with industry
+              expertise, ensuring you gain a clear understanding of real-world
+              implementations.
+            </h2>
+          </div>
+          <div className="icons-container">
+          <div className="icon-box-wh">
+            <img src={chaireIcon} width={50}/>
+            <p>Placements</p>
+          </div>
+          <div className="icon-box">
+            <img src={personIcon} width={50}/>
+            <p>Professional trainers</p>
+          </div>
+          <div className="icon-box-btm">
+            <img src={clockIcon} width={50}/>
+            <p>24x7 Support</p>
+          </div>
+          <div className="icon-box-wh-btm">
+            <img src={certificateIcon} width={50}/>
+            <p>Certification</p>
+          </div>
           </div>
         </div>
       </div>
