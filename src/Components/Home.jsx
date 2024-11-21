@@ -18,16 +18,33 @@ import cssIcon from "../assets/images/programming-language-icons/css.png";
 import jsIcon from "../assets/images/programming-language-icons/js.png";
 import reactIcon from "../assets/images/programming-language-icons/react.png";
 import corporateIcon from "../assets/images/programming-language-icons/corporate.png";
-import certificateIcon from "../assets/icons/certificate.png"
-import chaireIcon from "../assets/icons/chair.png"
-import clockIcon from "../assets/icons/clock.png"
-import personIcon from "../assets/icons/person.png"
+import certificateIcon from "../assets/icons/certificate.png";
+import chaireIcon from "../assets/icons/chair.png";
+import clockIcon from "../assets/icons/clock.png";
+import personIcon from "../assets/icons/person.png";
+import CourseModal from "./CourseModal";
 
 const Home = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [selectedCourse, setSelectedCourse] = useState("");
+  const [formData,setFormData] = useState("");
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const handleEnroll = (course) => {
+    console.log("handleEntroll:",course)
+    setSelectedCourse(course);
+    setOpen(true);
+  };
+
+  const handleFormSubmit = (data) => {
+    console.log("Enrolled data:", selectedCourse);
+    setFormData(data);
+    console.log("Enrollment details:",formData);
+    setOpen(false);
   };
 
   return (
@@ -144,7 +161,7 @@ const Home = () => {
               </p>
             </div>
             <div className="course-button">
-              <button id="course-btn">Enroll</button>
+              <button id="course-btn" onClick={()=>handleEnroll("Java Full Stack")}>Enroll</button>
             </div>
           </div>
           <div className="course-card">
@@ -166,7 +183,7 @@ const Home = () => {
               </p>
             </div>
             <div className="course-button">
-              <button id="course-btn">Enroll</button>
+              <button id="course-btn" onClick={()=>handleEnroll("Automatic and Manual Testing")}>Enroll</button>
             </div>
           </div>
           <div className="course-card">
@@ -188,7 +205,7 @@ const Home = () => {
               </p>
             </div>
             <div className="course-button">
-              <button id="course-btn">Enroll</button>
+              <button id="course-btn" onClick={()=>handleEnroll("Python Full Stack")}>Enroll</button>
             </div>
           </div>
           <div className="course-card">
@@ -209,7 +226,7 @@ const Home = () => {
               </p>
             </div>
             <div className="course-button">
-              <button id="course-btn">Enroll</button>
+              <button id="course-btn" onClick={()=>handleEnroll("Front-end Development")}>Enroll</button>
             </div>
           </div>
           <div className="course-card">
@@ -229,15 +246,23 @@ const Home = () => {
               </p>
             </div>
             <div className="course-button">
-              <button id="course-btn">Enroll</button>
+              <button id="course-btn" onClick={()=>handleEnroll("Corporate training")}>Enroll</button>
             </div>
           </div>
         </div>
+        <CourseModal
+          open={open}
+          onClose={() => setOpen(false)}
+          selectedCourse={selectedCourse}
+          onSubmit={handleFormSubmit}
+        />
       </div>
       <div className="about-us">
         <div className="about-us-bg">
           <div className="about-title">
-            <h1 id="aboutheader-h1">Why <br/> choose us?</h1>
+            <h1 id="aboutheader-h1">
+              Why <br /> choose us?
+            </h1>
             <h2 id="aboutheader-h2">
               Our trainers are experienced professionals with industry
               expertise, ensuring you gain a clear understanding of real-world
@@ -245,22 +270,22 @@ const Home = () => {
             </h2>
           </div>
           <div className="icons-container">
-          <div className="icon-box-wh">
-            <img src={chaireIcon} width={50}/>
-            <p>Placements</p>
-          </div>
-          <div className="icon-box">
-            <img src={personIcon} width={50}/>
-            <p>Professional trainers</p>
-          </div>
-          <div className="icon-box-btm">
-            <img src={clockIcon} width={50}/>
-            <p>24x7 Support</p>
-          </div>
-          <div className="icon-box-wh-btm">
-            <img src={certificateIcon} width={50}/>
-            <p>Certification</p>
-          </div>
+            <div className="icon-box-wh">
+              <img src={chaireIcon} width={50} />
+              <p>Placements</p>
+            </div>
+            <div className="icon-box">
+              <img src={personIcon} width={50} />
+              <p>Professional trainers</p>
+            </div>
+            <div className="icon-box-btm">
+              <img src={clockIcon} width={50} />
+              <p>24x7 Support</p>
+            </div>
+            <div className="icon-box-wh-btm">
+              <img src={certificateIcon} width={50} />
+              <p>Certification</p>
+            </div>
           </div>
         </div>
       </div>
