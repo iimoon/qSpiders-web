@@ -23,19 +23,20 @@ import chaireIcon from "../assets/icons/chair.png";
 import clockIcon from "../assets/icons/clock.png";
 import personIcon from "../assets/icons/person.png";
 import CourseModal from "./CourseModal";
+import ChartModule from "./ChartModule";
 
 const Home = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [open, setOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState("");
-  const [formData,setFormData] = useState("");
+  const [formData, setFormData] = useState("");
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
   const handleEnroll = (course) => {
-    console.log("handleEntroll:",course)
+    console.log("handleEntroll:", course);
     setSelectedCourse(course);
     setOpen(true);
   };
@@ -43,7 +44,7 @@ const Home = () => {
   const handleFormSubmit = (data) => {
     console.log("Enrolled data:", selectedCourse);
     setFormData(data);
-    console.log("Enrollment details:",formData);
+    console.log("Enrollment details:", formData);
     setOpen(false);
   };
 
@@ -161,7 +162,12 @@ const Home = () => {
               </p>
             </div>
             <div className="course-button">
-              <button id="course-btn" onClick={()=>handleEnroll("Java Full Stack")}>Enroll</button>
+              <button
+                id="course-btn"
+                onClick={() => handleEnroll("Java Full Stack")}
+              >
+                Enroll
+              </button>
             </div>
           </div>
           <div className="course-card">
@@ -183,7 +189,12 @@ const Home = () => {
               </p>
             </div>
             <div className="course-button">
-              <button id="course-btn" onClick={()=>handleEnroll("Automatic and Manual Testing")}>Enroll</button>
+              <button
+                id="course-btn"
+                onClick={() => handleEnroll("Automatic and Manual Testing")}
+              >
+                Enroll
+              </button>
             </div>
           </div>
           <div className="course-card">
@@ -205,7 +216,12 @@ const Home = () => {
               </p>
             </div>
             <div className="course-button">
-              <button id="course-btn" onClick={()=>handleEnroll("Python Full Stack")}>Enroll</button>
+              <button
+                id="course-btn"
+                onClick={() => handleEnroll("Python Full Stack")}
+              >
+                Enroll
+              </button>
             </div>
           </div>
           <div className="course-card">
@@ -226,7 +242,12 @@ const Home = () => {
               </p>
             </div>
             <div className="course-button">
-              <button id="course-btn" onClick={()=>handleEnroll("Front-end Development")}>Enroll</button>
+              <button
+                id="course-btn"
+                onClick={() => handleEnroll("Front-end Development")}
+              >
+                Enroll
+              </button>
             </div>
           </div>
           <div className="course-card">
@@ -246,7 +267,12 @@ const Home = () => {
               </p>
             </div>
             <div className="course-button">
-              <button id="course-btn" onClick={()=>handleEnroll("Corporate training")}>Enroll</button>
+              <button
+                id="course-btn"
+                onClick={() => handleEnroll("Corporate training")}
+              >
+                Enroll
+              </button>
             </div>
           </div>
         </div>
@@ -287,6 +313,32 @@ const Home = () => {
               <p>Certification</p>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="stats-container">
+        <div className="stats-intro">
+          <h1 id="stats-h1">
+            We have placed over <span id="orange-highlight">3lakh+</span> <br /> students
+            all over India, both from CS and non-CS backgrounds
+          </h1>
+        </div>
+        <div className="piechart-text-container">
+          <div className="piechart-container">
+            <ChartModule />
+          </div>
+          <div className="stats-text">
+            <ul>
+              <li id="cs-list-item">
+                <h2>CS Background: 56.8%</h2>
+              </li>
+              <li id="noncs-list-item">
+                <h2>Non CS Background: 43.2%</h2>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="stats-outro">
+          <p>Our comprehensive training program equips you with industry-standard knowledge and practical skills to excel in your career.</p>
         </div>
       </div>
     </div>

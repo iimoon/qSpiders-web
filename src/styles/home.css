@@ -36,6 +36,9 @@
     color: orange;
 }
 
+#orange-highlight{
+    color: orange;
+}
 #sub-text{
     margin-bottom: 4px;
 }
@@ -335,8 +338,56 @@
   #aboutheader-h2 {
     font-size: 2.1rem;
     color: black;
-    font-weight: bold;
+    font-weight: 600;
+    
   }
+
+.stats-container{
+    display: flex;
+    flex-direction: column;
+}
+.stats-intro{
+    text-align: center;
+    margin: auto;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 58px;
+}
+.piechart-text-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.piechart-container{
+    width: 50%;
+}
+.stats-text{
+    font-weight: 700;
+    position: relative;
+    right:150px;
+    display: flex;
+    align-items: center;
+    list-style: square;
+}
+
+.stats-outro{
+    margin-top: 40px;
+    width:49%;
+    
+    line-height: 1.6;
+    display: flex;
+    font-size: 2rem;
+    font-weight: 400;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+
+
 @media (max-width: 768px) {
 
     .header-color{
