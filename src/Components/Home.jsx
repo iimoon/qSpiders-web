@@ -24,6 +24,7 @@ import clockIcon from "../assets/icons/clock.png";
 import personIcon from "../assets/icons/person.png";
 import CourseModal from "./CourseModal";
 import ChartModule from "./ChartModule";
+import AutoScrollingTestimonials from "./AutoScrollingTestimonials ";
 
 const Home = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -339,6 +340,18 @@ const Home = () => {
         </div>
         <div className="stats-outro">
           <p>Our comprehensive training program equips you with industry-standard knowledge and practical skills to excel in your career.</p>
+        </div>
+      </div>
+      <div className="review-container">
+        <h1 id="review-intro">Checkout what people say about us</h1>
+        <AutoScrollingTestimonials/>
+      </div>
+      <div className="bookdemo-container">
+        <div className="bookdemo-title">
+
+        </div>
+        <div className="bookdemo-btn-container">
+          
         </div>
       </div>
     </div>
