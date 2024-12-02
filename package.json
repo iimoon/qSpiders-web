@@ -24,6 +24,7 @@
     "@mantine/hooks": "^7.14.1",
     "@mantine/modals": "^7.14.1",
     "@mui/material": "^6.1.8",
+    "axios": "^1.7.7",
     "chart.js": "^4.4.6",
     "dayjs": "^1.11.13",
     "framer-motion": "^11.11.17",
@@ -32,6 +33,7 @@
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.3.1",
     "react-slick": "^0.30.2",
+    "react-youtube": "^10.1.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.13"
   },
